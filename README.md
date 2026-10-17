@@ -56,19 +56,25 @@ It is **100% free**, does **not** require a credit card, and takes about 3 minut
 2. In the big search bar, type `Google Drive API` and press Enter.
 3. Click on **Google Drive API** in the results, then click the blue **Enable** button.
 
-### 3. Configure the Consent Screen (Don't skip this!)
-Before Google lets you download a key, it makes you fill out a basic "app name" screen.
-1. In the left sidebar, click **OAuth consent screen** under **APIs & Services** (Google sometimes renames this tab to **Google Auth Platform** -> **Overview**).
-2. If you see a **Get Started** button:
+### 3. Configure the Consent Screen & Unlock "Publish App"
+Before Google lets you use your key, it makes you fill out a basic "app name" screen.
+
+1. In the left sidebar, click **Google Auth Platform** (or **OAuth consent screen**) -> **Overview**.
+2. Click **Get Started** and fill in the basics:
    - **App Information:** Type `DocsOpener` as the App name, select your own Gmail address in the User support email dropdown, and click **Next**.
    - **Audience:** Select **External** and click **Next**.
    - **Contact Information:** Type your own Gmail address again and click **Next**.
    - Check the box to agree to the policy and click **Create**.
-   *(If you have the older Google interface instead: select **External**, click **Create**, fill in the App name and the two email boxes, and click **Save and Continue** through all 4 steps).*
-3. **CRITICAL STEP (Stop your login from expiring every 7 days):**
-   - Look in the left sidebar under **Audience** (or right on the main **OAuth consent screen** page).
-   - Under "Publishing status", it currently says *Testing*. Click the **Publish App** button and click **Confirm**.
-   - *Why?* If you leave it in "Testing", Google forces you to log in again every 7 days. Because this script only asks for basic permission to manage files it uploads itself (`drive.file`), Google does **not** require any app review when you click Publish. Your login will now last permanently.
+3. **Unlock the "Publish App" button (Stops your login from expiring every 7 days):**
+   If you go to the **Audience** tab right now, the **Publish app** button will be greyed out asking for a Homepage and Privacy Policy URL. You do **not** need to own a website to pass this—Google doesn't verify the URL unless you apply for commercial brand verification:
+   - Click **Branding** in the left sidebar.
+   - Scroll down to **App domain**.
+   - Paste `https://example.com` (or the URL to this GitHub repo) into **both** the **Application home page** box and the **Application privacy policy link** box.
+   - Right below that under **Authorized domains**, click **+ Add domain** and type `example.com` (or `github.com` if you used the repo link).
+   - Click **Save** at the bottom.
+   - Now click **Audience** in the left sidebar, click the unlocked **Publish app** button, and click **Confirm**.
+
+*(Note: If you prefer not to publish it, you can leave the app in "Testing" mode! Just scroll down on the **Audience** page to **Test users**, click **+ Add users**, and add your own Gmail address. The only difference in Testing mode is that Google will ask you to click your account in the browser once a week when you open a file).*
 
 ### 4. Download `credentials.json`
 1. In the left sidebar, go to **Clients** (or **APIs & Services** -> **Credentials**).
