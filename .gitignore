@@ -1,0 +1,17 @@
+# Private Google API credentials and user session tokens
+credentials.json
+credentials.json.json
+token.json
+token.pickle
+
+# Local user cache and runtime logs
+upload_cache.json
+python_log.txt
+crash_log.txt
+
+# Python bytecode and build files
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.spec
