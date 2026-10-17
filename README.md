@@ -58,7 +58,7 @@ It is **100% free**, does **not** require a credit card, and takes about 3 minut
 
 ### 3. Configure the Consent Screen (Don't skip this!)
 Before Google lets you download a key, it makes you fill out a basic "app name" screen.
-1. In the left sidebar, click **OAuth consent screen** (Google sometimes renames this tab to **Google Auth Platform** -> **Overview**).
+1. In the left sidebar, click **OAuth consent screen** under **APIs & Services** (Google sometimes renames this tab to **Google Auth Platform** -> **Overview**).
 2. If you see a **Get Started** button:
    - **App Information:** Type `DocsOpener` as the App name, select your own Gmail address in the User support email dropdown, and click **Next**.
    - **Audience:** Select **External** and click **Next**.
